@@ -4,7 +4,10 @@ git_source(:github) { |repo| "https://github.com/#{repo}.git" }
 ruby '2.7.1'
 gem 'mysql2', '~> 0.5.3'
 gem 'dotenv-rails'
-
+#The most popular HTML, CSS, and JavaScript framework for developing responsive, mobile first projects on the web. http://getbootstrap.com
+gem 'bootstrap', '~> 4.5'
+#This gem provides jQuery and the jQuery-ujs driver for your Rails 4+ application.
+gem 'jquery-rails', '~> 4.4'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.3'
 # Use sqlite3 as the database for Active Record
