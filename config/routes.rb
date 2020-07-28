@@ -7,6 +7,6 @@ Rails.application.routes.draw do
    get '/find_book',to: 'books#findbook'
    get '/paper_book',to: 'books#paper'
    get '/info',to:'books#info'
-
-   
+   resources 'bookborrow'
+   devise_for :users
 end
