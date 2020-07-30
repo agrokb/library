@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+
+  devise_for :kanris, controllers: { sessions: 'kanris/sessions',registrations:'kanris/registrations' }
   # For details on the DSL available within this file, see https://guides.rubyonrails.org/routing.html
    root "books#index"
    get '/new_book',to: 'books#newbook'
@@ -8,5 +10,6 @@ Rails.application.routes.draw do
    get '/paper_book',to: 'books#paper'
    get '/info',to:'books#info'
    resources 'bookborrow'
-   devise_for :users
+   resources 'backend'
+   devise_for :users, controllers: { sessions: 'users/sessions',registrations:'users/registrations' }
 end

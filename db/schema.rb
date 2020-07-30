@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_27_130323) do
+ActiveRecord::Schema.define(version: 2020_07_28_121259) do
 
   create_table "books", primary_key: "library_id", id: :integer, default: nil, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "library_name", limit: 252, null: false
@@ -22,6 +22,18 @@ ActiveRecord::Schema.define(version: 2020_07_27_130323) do
     t.string "isbn13", limit: 55
     t.string "classification_no", limit: 7
     t.integer "classification_sub_no", null: false
+  end
+
+  create_table "kanris", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_kanris_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_kanris_on_reset_password_token", unique: true
   end
 
   create_table "users", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
