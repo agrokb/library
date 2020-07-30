@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_07_28_121259) do
+ActiveRecord::Schema.define(version: 2020_07_30_124146) do
 
   create_table "books", primary_key: "library_id", id: :integer, default: nil, options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
     t.string "library_name", limit: 252, null: false
@@ -22,6 +22,7 @@ ActiveRecord::Schema.define(version: 2020_07_28_121259) do
     t.string "isbn13", limit: 55
     t.string "classification_no", limit: 7
     t.integer "classification_sub_no", null: false
+    t.string "bookstatus"
   end
 
   create_table "kanris", options: "ENGINE=InnoDB DEFAULT CHARSET=utf8", force: :cascade do |t|
