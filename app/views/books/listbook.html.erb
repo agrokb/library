@@ -1,3 +1,19 @@
+<nav class="navbar navbar-expand-lg navbar-light bg-dark">
+  <a class="navbar-brand text-light" href="#">KIC Library</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item active">
+        <a class="nav-link text-light" href="/">ホーム</a>
+      </li>
+       <li class="nav-item active">
+      </li>
+    </ul>
+    <%= link_to('Logout',destroy_user_session_path,class:"text-light",method: :delete) %>        
+  </div>
+</nav>
 <h1>書籍一覧</h1>
 <table class="table container mt-5">
   <thead>
