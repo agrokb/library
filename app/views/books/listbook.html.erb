@@ -1,0 +1,20 @@
+<h1>書籍一覧</h1>
+<table class="table container mt-5">
+  <thead>
+    <tr>
+      <th scope="col">id</th>
+      <th scope="col">書籍名</th>
+      <th scope="col">ISBN</th>
+    </tr>
+  </thead>
+  <tbody>
+   <% @book_list.each do |item| %>
+    <tr>
+      <th scope="row"><%= item.id %></th>
+      <td><%= item.library_name %></td>
+      <td><%= item.isbn10 %></td>
+    </tr>
+    <% end %>
+  </tbody>
+</table>
+

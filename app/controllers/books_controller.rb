@@ -9,6 +9,7 @@ before_action :authenticate_user!
     def borrowbook
     end
     def listbook
+      @book_list = Book.all
     end
     def findbook
     end
